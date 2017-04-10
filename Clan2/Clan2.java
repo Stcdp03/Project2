@@ -20,20 +20,26 @@ public class Clan2 extends Clan {
 
         ArrayList<ClanMember> clanMembers = new ArrayList<>();
 
-        //Initialize the four types of action point deciders where the simple deciders deliver typical maximum/non-
-        //iterative damage while the angry and selfless heal or deal damage more aggressively while taking extra damage
+        /*
+         * Initialize the four types of action point deciders where the simple deciders deliver typical maximum/non-
+         * iterative damage while the angry and selfless heal or deal damage more aggressively while taking extra damage
+         */
         ActionPointDecider simpleWDecider = new SimpleWarriorDecider(10);
         ActionPointDecider simpleHDecider = new SimpleHealerDecider(10);
         ActionPointDecider angryWDecider = new AngryWarriorDecider(20);
         ActionPointDecider selflessHDecider = new SelflessHealerDecider(20);
 
-        //If the totalHP to be distributed is less than 20, make one warrior
+        /*
+         * If the totalHP to be distributed is less than 20, make one warrior
+         */
         if (totalHP <= 20) {
             clanMembers.add(new ClanMember(getClanID(), WARRIOR, totalHP, simpleWDecider));
         }
 
-        //If the totalHP to be distributed is between 20 and 400, give each randomly-generated member 1/10 of totalHP
-        //until the last member who will receive 1/10 or the remainder
+        /*
+         * If the totalHP to be distributed is between 20 and 400, give each randomly-generated member 1/10 of totalHP
+         * until the last member who will receive 1/10 or the remainder
+         */
         else if (totalHP > 20 && totalHP <= 400) {
             while (unassignedHP > 0) {
                 int nextHpAssignment = totalHP/10;
@@ -65,8 +71,10 @@ public class Clan2 extends Clan {
             }
         }
 
-        //If the totalHP to be distributed is between 400 and 1000, give each randomly-generated member 1/50 of totalHP
-        //until the last member, who will receive 1/50 or the remainder
+        /*
+         * If the totalHP to be distributed is between 400 and 1000, give each randomly-generated member 1/50 of
+         * totalHP until the last member, who will receive 1/50 or the remainder
+         */
         else if (totalHP > 400 && totalHP < 1000){
             while (unassignedHP > 0) {
                 int nextHpAssignment = totalHP/50;
@@ -98,8 +106,10 @@ public class Clan2 extends Clan {
             }
         }
 
-        //If the totalHP to be distributed is greater than 50,000, give each randomly-generated member 1000 of totalHP
-        //until the last member who will receive the remainder (less than 1000)
+        /*
+         * If the totalHP to be distributed is greater than 50,000, give each randomly-generated member 1000 of totalHP
+         * until the last member who will receive the remainder (less than 1000)
+         */
         else if (totalHP > 50000){
             while (unassignedHP > 0) {
                 int nextHpAssignment = 1000;
@@ -123,8 +133,10 @@ public class Clan2 extends Clan {
             }
         }
 
-        //Otherwise, give each randomly-generated member 1/100, while checking for the max HP limit, of totalHP
-        //until the last member who will receive 1/100 or the remainder
+        /*
+         * Otherwise, give each randomly-generated member 1/100, while checking for the max HP limit, of totalHP
+         * until the last member who will receive 1/100 or the remainder
+         */
         else {
             while (unassignedHP > 0) {
                 int nextHpAssignment = totalHP/100;
