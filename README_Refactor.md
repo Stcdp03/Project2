@@ -1,0 +1,2 @@
+We refactored the method runmelee in the Class ClanMelee ,because it is a long method,  by add a private helper method we named it (addParticipants)
+and we pass (clans, hitPoints,clanNames, clanStats , participants) as a parameter and we invoke addParticipants in the runmelee method.

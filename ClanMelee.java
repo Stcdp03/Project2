@@ -182,7 +182,9 @@ public class ClanMelee {
     }
 
 
-    // this method prints the status of clansWins(how many wins each clan has)
+    /**
+     * This method prints the status of clansWins(how many wins each clan has)
+     */
     void printStats() {
         clansWins.print();
     }
