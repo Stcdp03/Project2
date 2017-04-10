@@ -9,8 +9,9 @@ import java.util.Collection;
 import java.util.Collections;
 
 public class ClanMelee {
+
     /*
-    *	clansWins wraps a hashMap of ClanWins which keep track of the number of wins of each clan
+    *	ClansWins wraps a hashMap of ClanWins which keep track of the number of wins of each clan
     */
     ClansWins clansWins = new ClansWins();
 
@@ -39,20 +40,22 @@ public class ClanMelee {
         Arrays.fill(previouslyAlive, true);
         int roundCount = 0;
 
-        // this piece of code simulates the rounds
+        /*
+         * This piece of code simulates the rounds
+          */
         while (clanCount > 1) {
             Collections.shuffle(participants);
             clanStats = new ClanStats(totalClanCount);
 
-            // this array holds the information about which clans are alive and which are eliminated
+            // This array holds the information about which clans are alive and which are eliminated
             boolean[] currentlyAlive = new boolean[totalClanCount];
             Arrays.fill(currentlyAlive, false);
 
-            // this arraylist holds the remaing participants(who do not end up dead after interaction)
+            // This arraylist holds the remaing participants(who do not end up dead after interaction)
             ArrayList<ClanMember> remaining = new ArrayList<>(participants.size());
 
             /*
-            * the following piece of code picks two clanMembers from the participants and runs the interaction
+            * The following piece of code picks two clanMembers from the participants and runs the interaction
             * whoever among p1 and p2 or both remain alive after interaction, they are added to remaining
             */
             for (int i = 0; i < participants.size() - 1; i += 2) {
@@ -106,7 +109,7 @@ public class ClanMelee {
             participants = remaining;
         }
 
-        // see if all the clans are eleminated or there is winner
+        // see if all the clans are eliminated or there is winner
 
         if (clanCount == 0) {
             System.out.println("All were slain after " + roundCount
@@ -118,7 +121,10 @@ public class ClanMelee {
             clansWins.addWin(victorID);
         }
     }
-    //add new helper method name addParticipants
+    /**
+     * Add new mutator helper method name addParticipants
+     * @param - This method requires all pieces that it changes in the code
+     */
     private void addParticipants(Collection<Clan> clans, int hitPoints, String[] clanNames,ClanStats clanStats ,ArrayList<ClanMember> participants) {
 
 
