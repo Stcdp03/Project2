@@ -8,7 +8,7 @@ import java.util.ArrayList;
 /**
  * Created by Rocco on 4/19/17.
  */
-public class ClanFatuova extends{
+public class ClanFatuova extends Clan{
 
 
 
