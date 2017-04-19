@@ -11,4 +11,5 @@ public interface ActionPointDecider {
      * @return      the number of points to attack or heal with. 0 to run away.
      */
     public int decideActionPoints(ClanMember me, ClanMember other);
+
 }
