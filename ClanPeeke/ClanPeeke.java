@@ -21,9 +21,10 @@ public class ClanPeeke extends Clan
         ArrayList<ClanMember> fullClanMembers = new ArrayList<>();
 
         PeekeWarriorMember Warrior = new PeekeWarriorMember(getClanID());
-        PeekeHealerMember advHealer = new PeekeHealerMember(getClanID());
+        PeekeHealerMember Healer = new PeekeHealerMember(getClanID());
 
         fullClanMembers.addAll(Warrior.getClanMembers(hitPoints));
+        fullClanMembers.addAll(Healer.getClanMembers(hitPoints));
 
         return fullClanMembers;
     }
