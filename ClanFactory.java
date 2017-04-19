@@ -1,5 +1,6 @@
 package clanmelee;
 
+import ClanDahdoh.ClanDahdoh;
 import ClanFatuova.ClanFatuova;
 import ClanPeeke.ClanPeeke;
 import PolichClan.PolichClan;
@@ -25,7 +26,8 @@ public class ClanFactory
         clans.add(new ClanPeeke(clanID++));
         clans.add(new PolichClan(clanID++));
         clans.add(new ClanFatuova((clanID++)));
-
+        clans.add(new RajhiClan((clanID++)));
+        clans.add(new ClanDahdoh((clanID++)));
 
 
         return clans;
