@@ -22,7 +22,7 @@ public class PeekeHealerMember extends Clan{
 
         ActionPointDecider decider = new PeekeHealerDecider(10);
 
-        int adjHitPoints = (int)(hitPoints * .25);
+        int adjHitPoints = (int)(hitPoints * .1);
         while (adjHitPoints > 0)
         {
             int nextHP = 600;
