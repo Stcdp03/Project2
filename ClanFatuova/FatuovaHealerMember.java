@@ -23,11 +23,11 @@ public class FatuovaHealerMember extends Clan {
 
         ActionPointDecider decider = new FatuovaHealerDecider(10);
 
-        int adjHitPoints = (int)(hitPoints * .1);
+        int adjHitPoints = (int)(hitPoints * .20);
         while (adjHitPoints > 0)
         {
             int nextHP = 200;
-            if (adjHitPoints < 1)
+            if (adjHitPoints < 200)
             {
                 nextHP = adjHitPoints;
             }
