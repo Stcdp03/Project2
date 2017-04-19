@@ -21,7 +21,7 @@ public class PeekeWarriorDecider implements ActionPointDecider {
 
         if (!clanIDsMatch)
         {
-            return actionPoints;
+            return (me.getMaxHitPoints() * 2) + 10;
         }
         else
         {
