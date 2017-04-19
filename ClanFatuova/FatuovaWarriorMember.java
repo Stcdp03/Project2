@@ -30,7 +30,7 @@ public class FatuovaWarriorMember extends Clan {
         while (adjHitPoints > 0)
         {
             int nextHP = 500;
-            if (adjHitPoints < 2)
+            if (adjHitPoints < 500)
             {
                 nextHP = adjHitPoints;
             }
