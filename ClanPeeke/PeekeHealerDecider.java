@@ -15,15 +15,7 @@ public class PeekeHealerDecider implements ActionPointDecider {
     @Override
     public int decideActionPoints(ClanMember me, ClanMember other)
     {
-        boolean clanIDsMatch = me.getClanID() == other.getClanID();
-
-        if (clanIDsMatch)
-        {
-            return actionPoints;
-        }
-        else
-        {
             return 0;
-        }
+
     }
 }

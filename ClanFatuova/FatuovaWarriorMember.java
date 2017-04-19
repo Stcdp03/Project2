@@ -26,7 +26,7 @@ public class FatuovaWarriorMember extends Clan {
 
         ActionPointDecider decider = new FatuovaWarriorDecider(10);
 
-        int adjHitPoints = (int)(hitPoints * .20);
+        int adjHitPoints = (int)(hitPoints * .80);
         while (adjHitPoints > 0)
         {
             int nextHP = 500;
