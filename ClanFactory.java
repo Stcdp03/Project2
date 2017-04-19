@@ -1,5 +1,8 @@
 package clanmelee;
 
+import ClanFatuova.ClanFatuova;
+import ClanPeeke.ClanPeeke;
+import PolichClan.PolichClan;
 import clanmelee.Clan1.Clan1;
 import clanmelee.Clan2.Clan2;
 
@@ -19,8 +22,10 @@ public class ClanFactory
 
         int clanID = 0;
 
-        clans.add(new Clan1(clanID++));
-        clans.add(new Clan2(clanID++));
+        clans.add(new ClanPeeke(clanID++));
+        clans.add(new PolichClan(clanID++));
+        clans.add(new ClanFatuova((clanID++)));
+
 
 
         return clans;

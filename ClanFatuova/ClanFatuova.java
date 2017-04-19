@@ -25,9 +25,10 @@ public class ClanFatuova extends Clan{
             ArrayList<clanmelee.ClanMember> fullClanMembers = new ArrayList<>();
 
             FatuovaWarriorMember Warrior = new FatuovaWarriorMember(getClanID());
-            FatuovaHealerMember advHealer = new FatuovaHealerMember(getClanID());
+            FatuovaHealerMember Healer = new FatuovaHealerMember(getClanID());
 
             fullClanMembers.addAll(Warrior.getClanMembers(hitPoints));
+            fullClanMembers.addAll(Healer.getClanMembers(hitPoints));
 
             return fullClanMembers;
         }
