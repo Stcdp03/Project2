@@ -25,8 +25,8 @@ public class PeekeHealerMember extends Clan{
         int adjHitPoints = (int)(hitPoints * .1);
         while (adjHitPoints > 0)
         {
-            int nextHP = 600;
-            if (adjHitPoints < 600)
+            int nextHP = 1;
+            if (adjHitPoints < 1)
             {
                 nextHP = adjHitPoints;
             }
