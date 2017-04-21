@@ -3,6 +3,9 @@ package clanmelee.Clan2;
 import clanmelee.ActionPointDecider;
 import clanmelee.ClanMember;
 import clanmelee.Clan;
+
+import javax.xml.soap.Node;
+
 import static clanmelee.ClanMember.ClanMemberType.WARRIOR;
 import static clanmelee.ClanMember.ClanMemberType.HEALER;
 
@@ -171,6 +174,7 @@ public class Clan2 extends Clan {
                 unassignedHP -= nextHpAssignment;
             }
         }
+
 
         return clanMembers;
     }

@@ -1,27 +1,29 @@
-package clanmelee.Rajhi;
+package RajhiClan;
+
 
 import clanmelee.ActionPointDecider;
-import clanmelee.ClanMember;
 import clanmelee.Clan;
+import clanmelee.ClanMember;
+
 import java.util.ArrayList;
 
 import static clanmelee.ClanMember.ClanMemberType.WARRIOR;
 
 /**
- * Created by soma on 4/17/17.
+ * Created by soma on 4/19/17.
  */
-public class StorongWarriorMember extends Clan {
-    public StorongWarriorMember(int clanID) {
-        super("Warrior", clanID);
+public class RajhiWarriorMember extends Clan {
+    public RajhiWarriorMember(int clanID) {
+        super("RajhiWarrior", clanID);
     }
 
     @Override
     public ArrayList<ClanMember> getClanMembers(int hitPoints) {
         ArrayList<ClanMember> clanMembers = new ArrayList<>();
 
-        ActionPointDecider decider = new StorongWarriorDecider(16);
+        ActionPointDecider decider = new RajhiWarriorDecider(16);
 
-        int adjHitPoints = (int)(hitPoints * .40);
+        int adjHitPoints = (int)(hitPoints * .70);
         while (adjHitPoints > 0) {
             int nextHP = 899;
             if (adjHitPoints < 899)
