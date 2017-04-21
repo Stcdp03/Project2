@@ -2,5 +2,5 @@ _Charlie_: Worked on the UML, documentation for all classes, ran the melee with 
 _Sara_: Refactored ClanMelee
 _Somaya_: Refactored ClanMelee
 _Rocco_: Created the UML Diagram
-_David_: 
-_John_: 
+_David_: Worked on Documentation
+_John_: Work on Documentation
